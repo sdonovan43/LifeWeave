@@ -1,0 +1,140 @@
+{
+  "user_profile": {
+    "user_id": "user_12345",
+    "age": 35,
+    "sex": "male",
+    "height_cm": 175,
+    "weight_kg": 70,
+    "bmi": 22.9
+  },
+  "health_metrics": {
+    "vital_signs": {
+      "resting_heart_rate": {
+        "value": 68,
+        "unit": "bpm",
+        "timestamp": "2026-11-11T08:00:00Z"
+      },
+      "blood_pressure": {
+        "systolic": 125,
+        "diastolic": 82,
+        "unit": "mmHg",
+        "timestamp": "2026-11-11T08:00:00Z"
+      }
+    },
+    "sleep_metrics": {
+      "sleep_duration_hours": 6.5,
+      "sleep_efficiency": 75,
+      "sleep_quality": "Fair",
+      "timestamp": "2026-11-11T07:00:00Z"
+    },
+    "activity_metrics": {
+      "daily_steps": 7200,
+      "active_minutes": 35,
+      "distance_walked_meters": 5800,
+      "timestamp": "2026-11-11T08:00:00Z"
+    },
+    "recovery_metrics": {
+      "heart_rate_variability": 55,
+      "unit": "ms",
+      "timestamp": "2026-11-11T08:00:00Z"
+    }
+  },
+  "symptoms": [
+    {
+      "symptom": "neck_tension",
+      "location": "left_scm",
+      "severity": 7,
+      "trigger": "desk_work",
+      "relief": "mfr",
+      "date": "2026-11-11"
+    },
+    {
+      "symptom": "headache",
+      "location": "temporal",
+      "severity": 5,
+      "trigger": "stress",
+      "relief": "rest",
+      "date": "2026-11-11"
+    },
+    {
+      "symptom": "fatigue",
+      "location": "general",
+      "severity": 6,
+      "trigger": "poor_sleep",
+      "relief": "sleep_extension",
+      "date": "2026-11-11"
+    }
+  ],
+  "interventions": [
+    {
+      "intervention": "massage",
+      "duration_minutes": 30,
+      "effectiveness_score": 8,
+      "timestamp": "2026-11-10T19:00:00Z"
+    },
+    {
+      "intervention": "mfr",
+      "duration_minutes": 45,
+      "effectiveness_score": 7,
+      "timestamp": "2026-11-10T20:30:00Z"
+    },
+    {
+      "intervention": "meditation",
+      "duration_minutes": 20,
+      "effectiveness_score": 6,
+      "timestamp": "2026-11-11T07:30:00Z"
+    }
+  ],
+  "context": {
+    "stress_level": 8,
+    "mood": "anxious",
+    "workload": "high",
+    "caffeine_intake": 3,
+    "alcohol_consumption": 0,
+    "timestamp": "2026-11-11T08:00:00Z"
+  },
+  "historical_data": [
+    {
+      "date": "2026-11-10",
+      "health_metrics": {
+        "sleep_duration_hours": 7.2,
+        "resting_heart_rate": 65,
+        "stress_level": 7
+      },
+      "symptoms": [
+        {
+          "symptom": "neck_tension",
+          "severity": 6
+        }
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "health_metrics": {
+        "sleep_duration_hours": 8.0,
+        "resting_heart_rate": 62,
+        "stress_level": 5
+      },
+      "symptoms": [
+        {
+          "symptom": "neck_tension",
+          "severity": 4
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "sleep_improvement",
+      "confidence": 0.85,
+      "reasoning": "Poor sleep quality and duration correlating with increased neck tension and fatigue",
+      "suggestion": "Maintain consistent bedtime routine, limit caffeine after 2 PM"
+    },
+    {
+      "type": "stress_management",
+      "confidence": 0.78,
+      "reasoning": "High stress level contributing to multiple symptoms including headache and neck tension",
+      "suggestion": "Incorporate 30-minute daily meditation or deep breathing exercises"
+    }
+  ]
+}

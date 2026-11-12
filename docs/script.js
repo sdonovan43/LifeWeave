@@ -28,22 +28,75 @@ function refreshData() {
     }, 1000);
 }
 
-// Generate recommendations
-function generateRecommendations() {
-    const generateBtn = document.getElementById('generate-btn');
-    generateBtn.innerHTML = 'Generating...';
-    generateBtn.disabled = true;
+// Analyze semantic reasoning
+function analyzeSemanticReasoning() {
+    const analyzeBtn = document.getElementById('analyze-btn');
+    analyzeBtn.innerHTML = 'Analyzing...';
+    analyzeBtn.disabled = true;
     
     setTimeout(() => {
-        // Simulate new recommendations generation
-        loadRecommendations();
+        // Simulate semantic reasoning analysis
+        loadSemanticReasoningData();
         
-        generateBtn.innerHTML = 'Generate Recommendations';
-        generateBtn.disabled = false;
+        analyzeBtn.innerHTML = 'Analyze Semantic Reasoning';
+        analyzeBtn.disabled = false;
         
         // Show success message
-        alert('New recommendations generated successfully!');
-    }, 1500);
+        alert('Semantic reasoning analysis completed successfully!');
+    }, 2000);
+}
+
+// Load semantic reasoning data (placeholder)
+function loadSemanticReasoningData() {
+    // This would be replaced with actual data loading in a real implementation
+    console.log("Loading semantic reasoning data...");
+    
+    // Simulate updating the belief systems section
+    const beliefsContainer = document.getElementById('beliefs-container');
+    beliefsContainer.innerHTML = `
+        <div class="recommendation-item">
+            <strong>Belief 1:</strong> Sleep quality affects cognitive performance
+        </div>
+        <div class="recommendation-item">
+            <strong>Belief 2:</strong> Stress levels correlate with heart rate variability
+        </div>
+        <div class="recommendation-item">
+            <strong>Belief 3:</strong> Physical activity influences sleep patterns
+        </div>
+    `;
+    
+    // Simulate updating the temporal patterns section
+    const temporalContainer = document.getElementById('temporal-patterns-container');
+    temporalContainer.innerHTML = `
+        <div class="recommendation-item">
+            <strong>Pattern:</strong> Increased stress during work hours
+        </div>
+        <div class="recommendation-item">
+            <strong>Pattern:</strong> Better sleep quality after evening exercise
+        </div>
+    `;
+    
+    // Simulate updating the hypotheses section
+    const hypothesesContainer = document.getElementById('hypotheses-container');
+    hypothesesContainer.innerHTML = `
+        <div class="recommendation-item">
+            <strong>Hypothesis:</strong> Meditation reduces stress-related heart rate spikes
+        </div>
+        <div class="recommendation-item">
+            <strong>Hypothesis:</strong> Dietary changes affect sleep duration and quality
+        </div>
+    `;
+    
+    // Simulate updating the narrative elements section
+    const narrativeContainer = document.getElementById('narrative-elements-container');
+    narrativeContainer.innerHTML = `
+        <div class="recommendation-item">
+            <strong>Narrative:</strong> Personal health journey with consistent patterns
+        </div>
+        <div class="recommendation-item">
+            <strong>Narrative:</strong> Seasonal variations in physical activity levels
+        </div>
+    `;
 }
 
 // Update dashboard metrics
@@ -76,8 +129,11 @@ function updateDashboardMetrics() {
         document.getElementById('nodes-count').textContent = healthData.length;
         document.getElementById('edges-count').textContent = Math.floor(healthData.length * 0.7);
         document.getElementById('last-update').textContent = new Date().toLocaleString();
+        document.getElementById('semantic-entities').textContent = 9; // 9 semantic reasoning entities
     }
 }
+
+// Graph visualization functions (placeholder)
 
 // Graph visualization functions (placeholder)
 function zoomIn() {
@@ -107,3 +163,4 @@ window.showView = showView;
 window.refreshData = refreshData;
 window.generateRecommendations = generateRecommendations;
 window.filterData = filterData;
+window.analyzeSemanticReasoning = analyzeSemanticReasoning;

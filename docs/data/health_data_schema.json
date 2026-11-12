@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "description": "Health data schema for LifeWeave personal semantic health knowledge graph",
+  "entities": {
+    "person": {
+      "description": "User profile and demographics",
+      "properties": {
+        "user_id": "string",
+        "age": "integer",
+        "sex": "string",
+        "height_cm": "number",
+        "weight_kg": "number",
+        "bmi": "number"
+      }
+    },
+    "metric": {
+      "description": "Quantitative health measurements",
+      "properties": {
+        "resting_heart_rate": {
+          "value": "integer",
+          "unit": "string",
+          "timestamp": "datetime"
+        },
+        "blood_pressure": {
+          "systolic": "integer",
+          "diastolic": "integer",
+          "unit": "string",
+          "timestamp": "datetime"
+        },
+        "sleep_duration_hours": {
+          "value": "number",
+          "unit": "string",
+          "timestamp": "datetime"
+        },
+        "daily_steps": {
+          "value": "integer",
+          "unit": "string",
+          "timestamp": "datetime"
+        },
+        "heart_rate_variability": {
+          "value": "integer",
+          "unit": "string",
+          "timestamp": "datetime"
+        }
+      }
+    },
+    "symptom": {
+      "description": "Personal health symptoms with detailed tracking",
+      "properties": {
+        "symptom": "string",
+        "location": "string",
+        "severity": "integer",
+        "trigger": "string",
+        "relief": "string",
+        "date": "date"
+      }
+    },
+    "intervention": {
+      "description": "Health actions taken and their effectiveness",
+      "properties": {
+        "intervention": "string",
+        "duration_minutes": "integer",
+        "effectiveness_score": "integer",
+        "timestamp": "datetime"
+      }
+    },
+    "context": {
+      "description": "Environmental and lifestyle factors affecting health",
+      "properties": {
+        "stress_level": "integer",
+        "mood": "string",
+        "workload": "string",
+        "caffeine_intake": "integer",
+        "alcohol_consumption": "integer",
+        "timestamp": "datetime"
+      }
+    }
+  },
+  "relationships": {
+    "symptom_to_metric": "Symptom is associated with specific health metrics",
+    "intervention_to_outcome": "Intervention leads to specific outcomes",
+    "context_to_symptom": "Context factors influence symptom occurrence",
+    "metric_to_intervention": "Health metrics guide intervention decisions"
+  }
+}

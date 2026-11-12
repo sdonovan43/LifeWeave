@@ -1,0 +1,129 @@
+{
+  "schema_version": "2.0",
+  "description": "Sample health data demonstrating semantic reasoning capabilities",
+  "person": {
+    "user_id": "user_12345",
+    "age": 35,
+    "sex": "female",
+    "height_cm": 165,
+    "weight_kg": 68,
+    "bmi": 24.3
+  },
+  "metrics": [
+    {
+      "resting_heart_rate": {
+        "value": 72,
+        "unit": "bpm",
+        "timestamp": "2026-11-11T08:00:00Z"
+      },
+      "blood_pressure": {
+        "systolic": 120,
+        "diastolic": 80,
+        "unit": "mmHg",
+        "timestamp": "2026-11-11T08:00:00Z"
+      },
+      "sleep_duration_hours": {
+        "value": 7.5,
+        "unit": "hours",
+        "timestamp": "2026-11-10T23:00:00Z"
+      },
+      "daily_steps": {
+        "value": 8500,
+        "unit": "steps",
+        "timestamp": "2026-11-11T00:00:00Z"
+      },
+      "heart_rate_variability": {
+        "value": 65,
+        "unit": "ms",
+        "timestamp": "2026-11-11T08:00:00Z"
+      }
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "headache",
+      "location": "temporal",
+      "severity": 3,
+      "trigger": "stress",
+      "relief": "rest",
+      "date": "2026-11-11"
+    }
+  ],
+  "interventions": [
+    {
+      "intervention": "meditation",
+      "duration_minutes": 20,
+      "effectiveness_score": 8,
+      "timestamp": "2026-11-11T09:30:00Z",
+      "success_rate": 0.85,
+      "sample_size": 12
+    }
+  ],
+  "context_factors": [
+    {
+      "stress_level": 7,
+      "mood": "anxious",
+      "workload": "high",
+      "caffeine_intake": 2,
+      "alcohol_consumption": 0,
+      "timestamp": "2026-11-11T08:00:00Z"
+    }
+  ],
+  "beliefs": [
+    {
+      "belief": "Regular meditation improves stress management",
+      "confidence": 0.9,
+      "supporting_observations": 15,
+      "category": "stress_management",
+      "status": "verified"
+    },
+    {
+      "belief": "Sleep quality affects headache frequency",
+      "confidence": 0.75,
+      "supporting_observations": 8,
+      "category": "sleep_quality",
+      "status": "hypothesis"
+    }
+  ],
+  "temporal_patterns": [
+    {
+      "pattern_name": "headache_frequency",
+      "relationship_type": "symptom_occurrence",
+      "delay_hours": 24,
+      "confidence": 0.8,
+      "supporting_events": 12
+    },
+    {
+      "pattern_name": "meditation_effectiveness",
+      "relationship_type": "intervention_outcome",
+      "delay_hours": 1,
+      "confidence": 0.85,
+      "supporting_events": 10
+    }
+  ],
+  "hypotheses": [
+    {
+      "hypothesis": "Headaches occur more frequently after high stress days",
+      "confidence": 0.7,
+      "supporting_events": 9,
+      "contradicting_events": 2,
+      "status": "under_investigation"
+    },
+    {
+      "hypothesis": "Meditation reduces headache severity by 30%",
+      "confidence": 0.65,
+      "supporting_events": 7,
+      "contradicting_events": 3,
+      "status": "testing"
+    }
+  ],
+  "narrative_elements": [
+    {
+      "type": "symptom_pattern",
+      "content": "User reports headaches after high stress days, with meditation showing some relief.",
+      "timestamp": "2026-11-11T10:00:00Z",
+      "related_patterns": ["headache_frequency", "meditation_effectiveness"],
+      "confidence": 0.85
+    }
+  ]
+}

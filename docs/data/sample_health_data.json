@@ -1,0 +1,68 @@
+{
+  "user_profile": {
+    "user_id": "user_12345",
+    "age": 35,
+    "sex": "male",
+    "height_cm": 175,
+    "weight_kg": 70,
+    "bmi": 22.9
+  },
+  "health_metrics": {
+    "vital_signs": {
+      "resting_heart_rate": {
+        "value": 62,
+        "unit": "bpm",
+        "timestamp": "2026-11-11T08:00:00Z"
+      },
+      "blood_pressure": {
+        "systolic": 120,
+        "diastolic": 80,
+        "unit": "mmHg",
+        "timestamp": "2026-11-11T08:00:00Z"
+      }
+    },
+    "sleep_metrics": {
+      "sleep_duration_hours": 7.5,
+      "sleep_efficiency": 85,
+      "sleep_quality": "Good",
+      "timestamp": "2026-11-11T07:00:00Z"
+    },
+    "activity_metrics": {
+      "daily_steps": 8500,
+      "active_minutes": 45,
+      "distance_walked_meters": 6500,
+      "timestamp": "2026-11-11T08:00:00Z"
+    },
+    "recovery_metrics": {
+      "heart_rate_variability": 65,
+      "unit": "ms",
+      "timestamp": "2026-11-11T08:00:00Z"
+    }
+  },
+  "symptoms": [
+    {
+      "symptom": "neck_tension",
+      "location": "left_scm",
+      "severity": 7,
+      "trigger": "desk_work",
+      "relief": "mfr",
+      "date": "2026-11-11"
+    }
+  ],
+  "interventions": [
+    {
+      "intervention": "massage",
+      "duration_minutes": 30,
+      "effectiveness_score": 8,
+      "timestamp": "2026-11-10T19:00:00Z"
+    }
+  ],
+  "context": {
+    "stress_level": 7,
+    "mood": "neutral",
+    "workload": "high",
+    "caffeine_intake": 2,
+    "alcohol_consumption": 0,
+    "timestamp": "2026-11-11T08:00:00Z"
+  }
+}

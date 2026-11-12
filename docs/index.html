@@ -19,6 +19,7 @@
                 <li><a href="#data">Health Data</a></li>
                 <li><a href="#graph">Knowledge Graph</a></li>
                 <li><a href="#recommendations">Recommendations</a></li>
+                <li><a href="#semantic-reasoning">Semantic Reasoning</a></li>
             </ul>
         </nav>
 
@@ -67,6 +68,7 @@
                 <div class="action-buttons">
                     <button id="refresh-btn" onclick="refreshData()">Refresh Data</button>
                     <button id="generate-btn" onclick="generateRecommendations()">Generate Recommendations</button>
+                    <button id="analyze-btn" onclick="analyzeSemanticReasoning()">Analyze Semantic Reasoning</button>
                 </div>
             </section>
 
@@ -80,6 +82,9 @@
                         <option value="steps">Steps</option>
                         <option value="sleep">Sleep</option>
                         <option value="hrv">HRV</option>
+                        <option value="symptom">Symptoms</option>
+                        <option value="intervention">Interventions</option>
+                        <option value="context">Context Factors</option>
                     </select>
                     <input type="date" id="date-filter">
                     <button onclick="filterData()">Filter</button>
@@ -107,6 +112,35 @@
                 <h2>AI-Powered Recommendations</h2>
                 <div id="recommendations-container">
                     <p>Loading recommendations...</p>
+                </div>
+            </section>
+
+            <!-- Semantic Reasoning View -->
+            <section id="semantic-reasoning" class="view">
+                <h2>Semantic Reasoning Analysis</h2>
+                <div class="card">
+                    <h3>Belief Systems</h3>
+                    <div id="beliefs-container">
+                        <p>Loading belief systems...</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Temporal Patterns</h3>
+                    <div id="temporal-patterns-container">
+                        <p>Loading temporal patterns...</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Hypotheses</h3>
+                    <div id="hypotheses-container">
+                        <p>Loading hypotheses...</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Narrative Elements</h3>
+                    <div id="narrative-elements-container">
+                        <p>Loading narrative elements...</p>
+                    </div>
                 </div>
             </section>
         </main>

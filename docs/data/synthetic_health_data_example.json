@@ -1,0 +1,158 @@
+{
+  "person": {
+    "user_id": "user_001",
+    "age": 32,
+    "sex": "female",
+    "height_cm": 165,
+    "weight_kg": 68,
+    "bmi": 24.5
+  },
+  "metrics": [
+    {
+      "resting_heart_rate": {
+        "value": 62,
+        "unit": "bpm",
+        "timestamp": "2023-10-15T08:00:00Z"
+      },
+      "blood_pressure": {
+        "systolic": 118,
+        "diastolic": 74,
+        "unit": "mmHg",
+        "timestamp": "2023-10-15T08:00:00Z"
+      },
+      "sleep_duration_hours": {
+        "value": 7.5,
+        "unit": "hours",
+        "timestamp": "2023-10-14T22:30:00Z"
+      },
+      "daily_steps": {
+        "value": 8432,
+        "unit": "steps",
+        "timestamp": "2023-10-15T08:00:00Z"
+      },
+      "heart_rate_variability": {
+        "value": 65,
+        "unit": "ms",
+        "timestamp": "2023-10-15T08:00:00Z"
+      }
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "headache",
+      "location": "temporal",
+      "severity": 3,
+      "trigger": "stress",
+      "relief": "rest",
+      "date": "2023-10-15"
+    },
+    {
+      "symptom": "fatigue",
+      "location": "general",
+      "severity": 4,
+      "trigger": "lack_of_sleep",
+      "relief": "sleep_extension",
+      "date": "2023-10-14"
+    }
+  ],
+  "interventions": [
+    {
+      "intervention": "meditation",
+      "duration_minutes": 20,
+      "effectiveness_score": 8,
+      "timestamp": "2023-10-15T09:30:00Z",
+      "success_rate": 0.85,
+      "sample_size": 15
+    },
+    {
+      "intervention": "sleep_extension",
+      "duration_minutes": 120,
+      "effectiveness_score": 7,
+      "timestamp": "2023-10-14T23:00:00Z",
+      "success_rate": 0.92,
+      "sample_size": 8
+    }
+  ],
+  "context": [
+    {
+      "stress_level": 7,
+      "mood": "anxious",
+      "workload": "high",
+      "caffeine_intake": 2,
+      "alcohol_consumption": 0,
+      "timestamp": "2023-10-15T08:00:00Z"
+    },
+    {
+      "stress_level": 6,
+      "mood": "tired",
+      "workload": "medium",
+      "caffeine_intake": 1,
+      "alcohol_consumption": 0,
+      "timestamp": "2023-10-14T22:30:00Z"
+    }
+  ],
+  "beliefs": [
+    {
+      "belief": "Regular meditation reduces stress levels",
+      "confidence": 0.85,
+      "supporting_observations": 12,
+      "category": "stress_management",
+      "status": "verified"
+    },
+    {
+      "belief": "Sleep quality directly impacts headache frequency",
+      "confidence": 0.78,
+      "supporting_observations": 8,
+      "category": "sleep_quality",
+      "status": "hypothesis"
+    }
+  ],
+  "temporal_patterns": [
+    {
+      "pattern_name": "stress_to_headache_pattern",
+      "relationship_type": "causal",
+      "delay_hours": 4,
+      "confidence": 0.75,
+      "supporting_events": 15
+    },
+    {
+      "pattern_name": "sleep_duration_to_energy_level",
+      "relationship_type": "correlational",
+      "delay_hours": 8,
+      "confidence": 0.82,
+      "supporting_events": 22
+    }
+  ],
+  "hypotheses": [
+    {
+      "hypothesis": "Reduced caffeine intake will decrease headache frequency",
+      "confidence": 0.65,
+      "supporting_events": 5,
+      "contradicting_events": 2,
+      "status": "pending"
+    },
+    {
+      "hypothesis": "Consistent sleep schedule improves stress management",
+      "confidence": 0.72,
+      "supporting_events": 10,
+      "contradicting_events": 3,
+      "status": "exploring"
+    }
+  ],
+  "narrative_elements": [
+    {
+      "type": "health_journey",
+      "content": "User has been experiencing increased stress and headaches, which seem to correlate with sleep patterns.",
+      "timestamp": "2023-10-15T10:00:00Z",
+      "related_patterns": ["stress_to_headache_pattern", "sleep_duration_to_energy_level"],
+      "confidence": 0.8
+    },
+    {
+      "type": "intervention_outcome",
+      "content": "Meditation sessions have shown consistent positive effects on stress reduction.",
+      "timestamp": "2023-10-15T10:00:00Z",
+      "related_patterns": ["stress_to_headache_pattern"],
+      "confidence": 0.85
+    }
+  ]
+}

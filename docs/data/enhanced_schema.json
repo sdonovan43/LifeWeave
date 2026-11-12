@@ -1,0 +1,159 @@
+{
+  "schema_version": "2.0",
+  "description": "Enhanced health data schema for LifeWeave personal semantic health knowledge graph",
+  "entities": {
+    "person": {
+      "description": "User profile and demographics",
+      "properties": {
+        "user_id": "string",
+        "age": "integer",
+        "sex": "string",
+        "height_cm": "number",
+        "weight_kg": "number",
+        "bmi": "number"
+      }
+    },
+    "metric": {
+      "description": "Quantitative health measurements",
+      "properties": {
+        "resting_heart_rate": {
+          "value": "integer",
+          "unit": "string",
+          "timestamp": "datetime"
+        },
+        "blood_pressure": {
+          "systolic": "integer",
+          "diastolic": "integer",
+          "unit": "string",
+          "timestamp": "datetime"
+        },
+        "sleep_duration_hours": {
+          "value": "number",
+          "unit": "string",
+          "timestamp": "datetime"
+        },
+        "daily_steps": {
+          "value": "integer",
+          "unit": "string",
+          "timestamp": "datetime"
+        },
+        "heart_rate_variability": {
+          "value": "integer",
+          "unit": "string",
+          "timestamp": "datetime"
+        }
+      }
+    },
+    "symptom": {
+      "description": "Personal health symptoms with detailed tracking",
+      "properties": {
+        "symptom": "string",
+        "location": "string",
+        "severity": "integer",
+        "trigger": "string",
+        "relief": "string",
+        "date": "date"
+      }
+    },
+    "intervention": {
+      "description": "Health actions taken and their effectiveness",
+      "properties": {
+        "intervention": "string",
+        "duration_minutes": "integer",
+        "effectiveness_score": "integer",
+        "timestamp": "datetime",
+        "success_rate": "number",
+        "sample_size": "integer"
+      }
+    },
+    "context": {
+      "description": "Environmental and lifestyle factors affecting health",
+      "properties": {
+        "stress_level": "integer",
+        "mood": "string",
+        "workload": "string",
+        "caffeine_intake": "integer",
+        "alcohol_consumption": "integer",
+        "timestamp": "datetime"
+      }
+    },
+    "belief": {
+      "description": "Semantic beliefs with confidence levels and supporting evidence",
+      "properties": {
+        "belief": "string",
+        "confidence": "number",
+        "supporting_observations": "integer",
+        "category": "string",
+        "status": "string"
+      }
+    },
+    "temporal_pattern": {
+      "description": "Temporal relationships and patterns in health data",
+      "properties": {
+        "pattern_name": "string",
+        "relationship_type": "string",
+        "delay_hours": "integer",
+        "confidence": "number",
+        "supporting_events": "integer"
+      }
+    },
+    "hypothesis": {
+      "description": "Causal hypotheses with supporting evidence",
+      "properties": {
+        "hypothesis": "string",
+        "confidence": "number",
+        "supporting_events": "integer",
+        "contradicting_events": "integer",
+        "status": "string"
+      }
+    },
+    "narrative_element": {
+      "description": "Elements for building health narratives",
+      "properties": {
+        "type": "string",
+        "content": "string",
+        "timestamp": "datetime",
+        "related_patterns": ["string"],
+        "confidence": "number"
+      }
+    }
+  },
+  "relationships": {
+    "symptom_to_metric": {
+      "description": "Symptom is associated with specific health metrics",
+      "confidence_levels": ["low", "medium", "high"],
+      "direction": "symptom -> metric"
+    },
+    "intervention_to_outcome": {
+      "description": "Intervention leads to specific outcomes",
+      "confidence_levels": ["low", "medium", "high"],
+      "direction": "intervention -> outcome"
+    },
+    "context_to_symptom": {
+      "description": "Context factors influence symptom occurrence",
+      "confidence_levels": ["low", "medium", "high"],
+      "direction": "context -> symptom"
+    },
+    "metric_to_intervention": {
+      "description": "Health metrics guide intervention decisions",
+      "confidence_levels": ["low", "medium", "high"],
+      "direction": "metric -> intervention"
+    },
+    "belief_to_evidence": {
+      "description": "Belief supported by observations",
+      "confidence_levels": ["low", "medium", "high"],
+      "direction": "belief -> evidence"
+    },
+    "temporal_cause_effect": {
+      "description": "Temporal causal relationships between events",
+      "confidence_levels": ["low", "medium", "high"],
+      "direction": "event1 -> event2 (delayed)"
+    }
+  },
+  "categories": {
+    "symptom": ["neck_tension", "headache", "fatigue", "joint_pain", "digestive_issue", "mood_change"],
+    "intervention": ["massage", "mfr", "meditation", "exercise", "dietary_change", "sleep_extension", "stress_management"],
+    "context_factor": ["stress_level", "mood", "workload", "caffeine_intake", "alcohol_consumption", "weather", "travel"],
+    "belief_category": ["sleep_quality", "stress_management", "intervention_effectiveness", "temporal_patterns"]
+  }
+}
