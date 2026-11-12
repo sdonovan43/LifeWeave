@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeWeave - Personal Health Knowledge Graph</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LifeWeave</h1>
+            <p>Personal Semantic Health Knowledge Graph System</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#dashboard" class="active">Dashboard</a></li>
+                <li><a href="#data">Health Data</a></li>
+                <li><a href="#graph">Knowledge Graph</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Dashboard View -->
+            <section id="dashboard" class="view active">
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h3>Health Overview</h3>
+                        <div class="metrics">
+                            <div class="metric">
+                                <span class="value" id="heart-rate-value">0</span>
+                                <span class="label">BPM</span>
+                                <span class="description">Heart Rate</span>
+                            </div>
+                            <div class="metric">
+                                <span class="value" id="steps-value">0</span>
+                                <span class="label">steps</span>
+                                <span class="description">Daily Steps</span>
+                            </div>
+                            <div class="metric">
+                                <span class="value" id="sleep-value">0</span>
+                                <span class="label">hours</span>
+                                <span class="description">Sleep Duration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Recent Recommendations</h3>
+                        <div id="recommendations-list" class="recommendations-list">
+                            <p>Loading recommendations...</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Knowledge Graph Status</h3>
+                        <div class="graph-status">
+                            <p><strong>Nodes:</strong> <span id="nodes-count">0</span></p>
+                            <p><strong>Edges:</strong> <span id="edges-count">0</span></p>
+                            <p><strong>Last Updated:</strong> <span id="last-update">-</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="refresh-btn" onclick="refreshData()">Refresh Data</button>
+                    <button id="generate-btn" onclick="generateRecommendations()">Generate Recommendations</button>
+                </div>
+            </section>
+
+            <!-- Health Data View -->
+            <section id="data" class="view">
+                <h2>Health Data</h2>
+                <div class="data-filters">
+                    <select id="data-type-filter">
+                        <option value="all">All Data Types</option>
+                        <option value="heart_rate">Heart Rate</option>
+                        <option value="steps">Steps</option>
+                        <option value="sleep">Sleep</option>
+                        <option value="hrv">HRV</option>
+                    </select>
+                    <input type="date" id="date-filter">
+                    <button onclick="filterData()">Filter</button>
+                </div>
+                <div id="data-table-container">
+                    <p>Loading health data...</p>
+                </div>
+            </section>
+
+            <!-- Knowledge Graph View -->
+            <section id="graph" class="view">
+                <h2>Knowledge Graph Visualization</h2>
+                <div id="graph-container">
+                    <p>Graph visualization will appear here...</p>
+                    <div class="graph-controls">
+                        <button onclick="zoomIn()">Zoom In</button>
+                        <button onclick="zoomOut()">Zoom Out</button>
+                        <button onclick="resetView()">Reset View</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommendations View -->
+            <section id="recommendations" class="view">
+                <h2>AI-Powered Recommendations</h2>
+                <div id="recommendations-container">
+                    <p>Loading recommendations...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>LifeWeave - Personal Semantic Health Knowledge Graph System</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
