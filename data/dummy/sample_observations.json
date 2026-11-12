@@ -1,0 +1,40 @@
+{
+  "user_id": "user_12345",
+  "observations": [
+    {
+      "id": "obs_001",
+      "description": "Neck work reduces symptoms within 24 hours",
+      "confidence": 0.85,
+      "related_factors": ["neck tension", "neck stretching"],
+      "timestamp": "2023-10-02T00:00:00Z"
+    },
+    {
+      "id": "obs_002",
+      "description": "High-stress work weeks reduce walking distance",
+      "confidence": 0.75,
+      "related_factors": ["stress level", "steps"],
+      "timestamp": "2023-10-03T00:00:00Z"
+    },
+    {
+      "id": "obs_003",
+      "description": "Cold-water exposure increases right-leg stiffness",
+      "confidence": 0.65,
+      "related_factors": ["cold shower", "right leg stiffness"],
+      "timestamp": "2023-10-03T00:00:00Z"
+    },
+    {
+      "id": "obs_004",
+      "description": "Meditation improves mood and reduces stress levels",
+      "confidence": 0.90,
+      "related_factors": ["meditation", "mood", "stress level"],
+      "timestamp": "2023-10-04T00:00:00Z"
+    },
+    {
+      "id": "obs_005",
+      "description": "Good sleep quality correlates with higher HRV",
+      "confidence": 0.80,
+      "related_factors": ["sleep hours", "hrv_ms"],
+      "timestamp": "2023-10-04T00:00:00Z"
+    }
+  ]
+}

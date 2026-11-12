@@ -1,0 +1,81 @@
+{
+  "user_id": "user_12345",
+  "measurements": [
+    {
+      "date": "2023-10-01",
+      "heart_rate_bpm": 72,
+      "hrv_ms": 65,
+      "sleep_hours": 7.5,
+      "steps": 8500,
+      "stress_level": 3,
+      "mood": "neutral"
+    },
+    {
+      "date": "2023-10-02",
+      "heart_rate_bpm": 68,
+      "hrv_ms": 72,
+      "sleep_hours": 6.2,
+      "steps": 12000,
+      "stress_level": 5,
+      "mood": "good"
+    },
+    {
+      "date": "2023-10-03",
+      "heart_rate_bpm": 75,
+      "hrv_ms": 58,
+      "sleep_hours": 8.0,
+      "steps": 9500,
+      "stress_level": 2,
+      "mood": "great"
+    },
+    {
+      "date": "2023-10-04",
+      "heart_rate_bpm": 70,
+      "hrv_ms": 68,
+      "sleep_hours": 7.0,
+      "steps": 11000,
+      "stress_level": 4,
+      "mood": "neutral"
+    }
+  ],
+  "symptoms": [
+    {
+      "date": "2023-10-01",
+      "symptom": "neck tension",
+      "severity": 3,
+      "location": "cervical"
+    },
+    {
+      "date": "2023-10-03",
+      "symptom": "headache",
+      "severity": 2,
+      "location": "temporal"
+    },
+    {
+      "date": "2023-10-04",
+      "symptom": "neck tension",
+      "severity": 2,
+      "location": "cervical"
+    }
+  ],
+  "interventions": [
+    {
+      "date": "2023-10-02",
+      "type": "neck stretching",
+      "duration_minutes": 15,
+      "effectiveness": 4
+    },
+    {
+      "date": "2023-10-03",
+      "type": "cold shower",
+      "duration_minutes": 5,
+      "effectiveness": 3
+    },
+    {
+      "date": "2023-10-04",
+      "type": "meditation",
+      "duration_minutes": 20,
+      "effectiveness": 5
+    }
+  ]
+}

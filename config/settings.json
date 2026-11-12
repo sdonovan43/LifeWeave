@@ -1,0 +1,15 @@
+{
+  "data": {
+    "dummy_data_path": "data/dummy/",
+    "personal_data_path": "data/personal/"
+  },
+  "ai": {
+    "model_name": "gemini-pro",
+    "api_key": "your-api-key-here"
+  },
+  "wearable": {
+    "apple_health_enabled": false,
+    "garmin_enabled": false,
+    "fitbit_enabled": false
+  }
+}
