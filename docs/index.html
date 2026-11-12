@@ -15,11 +15,11 @@
 
         <nav>
             <ul>
-                <li><a href="#dashboard" class="active">Dashboard</a></li>
-                <li><a href="#data">Health Data</a></li>
-                <li><a href="#graph">Knowledge Graph</a></li>
-                <li><a href="#recommendations">Recommendations</a></li>
-                <li><a href="#semantic-reasoning">Semantic Reasoning</a></li>
+                <li><a href="#" onclick="showView('dashboard'); return false;" class="active">Dashboard</a></li>
+                <li><a href="#" onclick="showView('data'); return false;">Health Data</a></li>
+                <li><a href="#" onclick="showView('graph'); return false;">Knowledge Graph</a></li>
+                <li><a href="#" onclick="showView('recommendations'); return false;">Recommendations</a></li>
+                <li><a href="#" onclick="showView('semantic-reasoning'); return false;">Semantic Reasoning</a></li>
             </ul>
         </nav>
 
@@ -61,6 +61,7 @@
                             <p><strong>Nodes:</strong> <span id="nodes-count">0</span></p>
                             <p><strong>Edges:</strong> <span id="edges-count">0</span></p>
                             <p><strong>Last Updated:</strong> <span id="last-update">-</span></p>
+                            <p><strong>Semantic Entities:</strong> <span id="semantic-entities">9</span></p>
                         </div>
                     </div>
                 </div>
